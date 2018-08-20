@@ -2,6 +2,7 @@
 Starter Admin For Laravel. This repo is based on practical web application development course on youtube. You can watch the videos on how we make this project or just git clone the project and start using. it. 
 
 ## Tutorial Description 
+https://www.youtube.com/playlist?list=PLB4AdipoHpxaHDLIaMdtro1eXnQtl_UvE
 
 Let's Build a Multi-Purpose Laravel + Vue Application is out now. In this series, you learn everything you need to know about Building a complete web application with Laravel and Vue js. So, I am so excited that so many of you guys like my content and keep inspiring me to create more videos. My goals is to inspire you to write better code and better applications. 
 
