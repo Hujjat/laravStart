@@ -24,6 +24,7 @@
         "admin-lte": "^3.0.0-alpha.2",
         "moment": "^2.22.2",
         "vform": "^1.0.0",
+        "vue-progressbar": "^0.7.5",
         "vue-router": "^3.0.1"
     }
 }
