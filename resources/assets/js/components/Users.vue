@@ -25,6 +25,7 @@
 
 
                   <tr v-for="user in users" :key="user.id">
+
                     <td>{{user.id}}</td>
                     <td>{{user.name}}</td>
                     <td>{{user.email}}</td>
@@ -139,6 +140,14 @@
             createUser(){
                 this.$Progress.start();
                 this.form.post('api/user');
+
+                $('#addNew').modal('hide')
+
+                toast({
+                    type: 'success',
+                    title: 'User Created in successfully'
+                    })
+
                 this.$Progress.finish();
             }
         },
