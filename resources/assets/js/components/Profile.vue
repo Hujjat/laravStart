@@ -79,7 +79,8 @@
                                     <label for="inputName" class="col-sm-2 control-label">Name</label>
 
                                     <div class="col-sm-12">
-                                    <input type="email" v-model="form.name" class="form-control" id="inputName" placeholder="Name">
+                                    <input type="" v-model="form.name" class="form-control" id="inputName" placeholder="Name">
+                                     <has-error :form="form" field="name"></has-error>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -87,6 +88,7 @@
 
                                     <div class="col-sm-12">
                                     <input type="email" v-model="form.email" class="form-control" id="inputEmail" placeholder="Email">
+                                     <has-error :form="form" field="email"></has-error>
                                     </div>
                                 </div>
 
@@ -94,7 +96,8 @@
                                     <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
 
                                     <div class="col-sm-12">
-                                    <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                                    <textarea  v-model="form.bio" class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                                     <has-error :form="form" field="bio"></has-error>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -106,10 +109,11 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="passpord" class="col-sm-12 control-label">Passport (leave empty if not changing)</label>
+                                    <label for="password" class="col-sm-12 control-label">Passport (leave empty if not changing)</label>
 
                                     <div class="col-sm-12">
-                                    <input type="passpord" class="form-control" id="passpord" placeholder="Passport">
+                                    <input type="password"  v-model="form.password" class="form-control" id="password" placeholder="Passport">
+                                     <has-error :form="form" field="password"></has-error>
                                     </div>
                                 </div>
 
@@ -150,12 +154,16 @@
             }
         },
         mounted() {
+
             console.log('Component mounted.')
         },
 
         methods:{
             updateInfo(){
                 this.$Progress.start();
+                if(this.form.password == ''){
+                    this.form.password = undefined;
+                }
                 this.form.put('api/profile')
                 .then(()=>{
 
