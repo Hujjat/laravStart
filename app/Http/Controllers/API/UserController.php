@@ -84,6 +84,7 @@ class UserController extends Controller
             if(file_exists($userPhoto)){
                 @unlink($userPhoto);
             }
+
         }
 
 
