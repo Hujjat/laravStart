@@ -30753,7 +30753,7 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_5_vue_progressbar___default.a, {
     height: '3px'
 });
 
-var routes = [{ path: '/dashboard', component: __webpack_require__(174) }, { path: '/developer', component: __webpack_require__(177) }, { path: '/users', component: __webpack_require__(180) }, { path: '/profile', component: __webpack_require__(183) }];
+var routes = [{ path: '/dashboard', component: __webpack_require__(174) }, { path: '/developer', component: __webpack_require__(177) }, { path: '/users', component: __webpack_require__(180) }, { path: '/profile', component: __webpack_require__(183) }, { path: '*', component: __webpack_require__(204) }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_4_vue_router__["a" /* default */]({
     mode: 'history',
