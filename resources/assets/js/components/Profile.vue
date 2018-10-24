@@ -187,24 +187,23 @@
                 });
             },
             updateProfile(e){
-                // console.log('uploading');
-                    let file = e.target.files[0];
-                    console.log(file);
-                    let reader = new FileReader();
-                    // let vm = this;
-                    if(file['size'] < 2111775){
-                        reader.onloadend = (file) => {
-                            // console.log('RESULT', reader.result)
-                            this.form.photo = reader.result;
-                        }
-                        reader.readAsDataURL(file);
-                    }else{
-                         swal({
-                            type: 'error',
-                            title: 'Oops...',
-                            text: 'You are uploading a large file',
-                        })
-                    }
+                let file = e.target.files[0];
+                let reader = new FileReader();
+
+                let limit = 1024 * 1024 * 2;
+                if(file['size'] > limit){
+                    swal({
+                        type: 'error',
+                        title: 'Oops...',
+                        text: 'You are uploading a large file',
+                    })
+                    return false;
+                }
+
+                reader.onloadend = (file) => {
+                    this.form.photo = reader.result;
+                }
+                reader.readAsDataURL(file);
             }
         },
 
