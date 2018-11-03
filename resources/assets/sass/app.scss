@@ -23,3 +23,25 @@ $fa-font-path: "../webfonts";
 }
 
 
+@media print {
+    .nav.nav-tabs li:not(.active){
+        display: none;
+    }
+    .invoice{
+    	padding: 10px 20px;
+    }
+
+    .invoice{
+		background-position: center center;
+		background-repeat: no-repeat;
+
+	}
+	.table-responsive table{
+		background-color: transparent !important;
+	}
+
+}
+
+@page {
+    margin: 0;
+}
